@@ -1,9 +1,11 @@
 package com.yirong.videolist.base
 
 //
-// Created by $USER_NAME on 2019/4/29.
+// Created by YIRONG on 2019/4/29.
 //
- interface IPresenter <in T:IBaseView>{
+interface IPresenter <in T:IBaseView>{
 
+  fun attachView(mRootView: T)
+  fun detachView()
 
 }

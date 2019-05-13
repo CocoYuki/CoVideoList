@@ -1,16 +1,16 @@
 package com.yirong.videolist
 
 import android.Manifest
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.yirong.videolist.adapter.MyReGifAdapter
 import com.yirong.videolist.utils.MPermissionHelper
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import kotlin.collections.ArrayList
-import android.support.v7.widget.StaggeredGridLayoutManager
-import android.support.v7.widget.SimpleItemAnimator
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import androidx.recyclerview.widget.SimpleItemAnimator
+import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 
 
@@ -28,12 +28,15 @@ class MainActivity : AppCompatActivity(),MPermissionHelper.PermissionCallBack {
 
     private fun initView() {
         recycley_view.setHasFixedSize(true)
-        val manager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        manager.gapStrategy = StaggeredGridLayoutManager.GAP_HANDLING_NONE;
+        val manager = androidx.recyclerview.widget.StaggeredGridLayoutManager(
+            2,
+            androidx.recyclerview.widget.StaggeredGridLayoutManager.VERTICAL
+        )
+        manager.gapStrategy = androidx.recyclerview.widget.StaggeredGridLayoutManager.GAP_HANDLING_NONE;
         recycley_view.layoutManager = manager
         recycley_view.itemAnimator = null
-        recycley_view.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+        recycley_view.addOnScrollListener(object : androidx.recyclerview.widget.RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: androidx.recyclerview.widget.RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
                 //防止第一行到顶部有空白区域
                 manager.invalidateSpanAssignments()

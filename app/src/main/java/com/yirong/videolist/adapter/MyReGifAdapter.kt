@@ -1,7 +1,7 @@
 package com.yirong.videolist.adapter
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -16,7 +16,7 @@ import com.yirong.videolist.R
 import com.yirong.videolist.app.GlideApp
 
 
-class MyReGifAdapter(val mContext: Context,var mDataLists:ArrayList<DataBean>): RecyclerView.Adapter<MyReGifAdapter.ViewHolder>() {
+class MyReGifAdapter(val mContext: Context,var mDataLists:ArrayList<DataBean>): androidx.recyclerview.widget.RecyclerView.Adapter<MyReGifAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(holderView: ViewGroup, position: Int): MyReGifAdapter.ViewHolder {
         val view = LayoutInflater.from(holderView.context).inflate(R.layout.item_recycle, holderView, false)
@@ -34,7 +34,7 @@ class MyReGifAdapter(val mContext: Context,var mDataLists:ArrayList<DataBean>): 
         holder.textView.text = "["+position+"]"+mDataLists[position].mDetailText
     }
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
         var imageView: ImageView = itemView.iv
         var textView: TextView = itemView.text
     }

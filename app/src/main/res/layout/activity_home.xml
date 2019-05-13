@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="@dimen/bottombar_height" android:weightSum="5" android:layout_gravity="bottom">
+        <com.yirong.videolist.ui.BottomBar
+                android:id="@+id/bottombar1"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+        ></com.yirong.videolist.ui.BottomBar>
+        <RelativeLayout android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+        android:background="@android:color/holo_orange_dark">
+
+        </RelativeLayout>
+        <com.yirong.videolist.ui.BottomBar
+                android:id="@+id/bottombar2"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+        ></com.yirong.videolist.ui.BottomBar>
+    </LinearLayout>
+</LinearLayout>
